@@ -88,13 +88,13 @@ body {
   color: var(--color-grey0);
 }
 
-.right__nav ul li a {
+/* .right__nav ul li a {
     text-decoration: none;
     color: #fff;
     text-transform: capitalize;
     font-weight: bold;
     box-shadow: var(--box-shadow-1);
-}
+} */
 .right__nav ul li a {
     list-style: none;
     display: inline-block;
@@ -108,6 +108,7 @@ body {
     text-decoration: none;
     background: var(--color-secondary);
 }
+
 
 .right__nav ul li a:hover {
     background: transparent;
@@ -124,6 +125,60 @@ header {
   color: var(--color-white);
   overflow: hidden;
 }
+
+
+/* CONTACT-----BUTTON */
+.contact__btn {
+    color: #000e17;
+    border: 1px solid #000e17;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.header__btn {
+    background: #fff;
+    position: absolute;
+    left: 3%;
+    top: 8vw;
+    z-index: 100;
+}
+.header__btn:hover {
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
+    color: #000e17;
+    transform: translateY(-1rem);
+}
+.contact__btn i {
+    font-size: 3.5rem;
+    position: absolute;
+}
+.header__btn p {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    animation: spinText 15s linear infinite;
+}
+.header__btn p span {
+    position: absolute;
+    transform-origin: 0.3rem 5rem ;
+}
+
+@keyframes spinText {
+
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+
+
 
 section {
   min-height: 100vh;
@@ -199,11 +254,10 @@ section {
 .header__content.right__header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 5rem;
-  padding-left: 3%;
-  padding-right: 3rem;
-  padding-top: 10%;
+  gap: 3rem;
+  padding-left: 2%;
+  padding-right: 3%;
+  padding-top: 20%;
   /* padding-bottom: 12%; */
 }
 .header__content .right__header .name {
@@ -268,39 +322,66 @@ section {
     height: 50px;
   }
 
-  .header__content {
+  .header__btn {
+    background: #fff;
+    position: absolute;
+    left: 3%;
+    top: 15vw;
+    z-index: 100;
+}
+
+  /* .header__content {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
-  }
+  } */
 
-  .left-header .h-shape {
+  /* .left-header .h-shape {
     display: none;
-  }
+  } */
 
-  .right__header {
+  /* .right__header {
     grid-row: 1;
     padding-right: 0rem !important;
     width: 90%;
     margin: 0 auto;
+  } */
+
+  .header__content.right__header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 12rem;
   }
+  .right__nav ul li a {
+    list-style: none;
+    display: inline-block;
+    padding:18px 16px;
+    border: 2px solid var(--color-white);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    background: var(--color-secondary);
+}
+.right__nav ul li a i {
+  font-size: 30px;
+}
+
   .right__header .name {
     font-size: 2.5rem !important;
     text-align: center;
     padding-top: 3rem;
   }
 
-  .header__content .left-header .image {
-    margin: 0 auto;
-    width: 90%;
-  }
 
-  .controls {
+  .right__nav {
     top: auto;
     bottom: 0;
     flex-direction: row;
     justify-content: center;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-16%);
     width: 100%;
     background-color: var(--color-grey-5);
   }
